@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="date" content="" />
+    <meta name="date" content="2021-10-02" />
     <meta name="keywords" content="" />
 
     <title>Expanding CSS grid column workaround</title>
@@ -39,7 +39,7 @@
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>The first and last columns collapse to <code>0</code> while the central column expands to match the width of the child element.</p>
 <figure>
-<img src="grid-broken.png" alt="Broken grid" /><figcaption aria-hidden="true">Broken grid</figcaption>
+<img src="../assets/images/grid-broken.png" alt="Broken grid" /><figcaption aria-hidden="true">Broken grid</figcaption>
 </figure>
 <h2 id="the-solution">The solution</h2>
 <p>To prevent the parent grid columns growing past their original equal <code>1fr</code> widths a constraint is needed in the form of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax()"><code>minmax</code></a> function. By setting a columns to have a width <code>minmax(0, 1fr)</code> ensures they will grow in width to a maximum of <code>1fr</code> and no more, preventing the expansion issue.</p>
@@ -47,7 +47,7 @@
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> minmax(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>fr<span class="fu">)</span>)<span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <figure>
-<img src="grid-working.png" alt="Working grid" /><figcaption aria-hidden="true">Working grid</figcaption>
+<img src="../assets/images/grid-working.png" alt="Working grid" /><figcaption aria-hidden="true">Working grid</figcaption>
 </figure>
 <h1 id="addendum">Addendum</h1>
 <p>The grid column behaviour documented about has been standard in Firefox for while now but only recently appeared in Chrome due to a change in version 93 which is catching some people off-guard. There is a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1247594">Chromium bug ticket</a> tracking the <em>issue</em> and a solution is currently being investigated (as of 2021/09/13).</p></main>
