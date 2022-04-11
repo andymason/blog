@@ -11,10 +11,21 @@ tooling.
 
 ## Requirements
 
-Linux, Bash, Pandoc
+Linux, Bash, Pandoc, watchexec (optional)
+
+## Development
+
+No local server is needed as everything can be viewed via local file access.
+
+[watchexec](watchexec) is used to monitor files changes and rebuild the HTML.
+
+```
+watchexec -w assets/ -w posts/ ./build.sh
+```
 
 ## License
 
 MIT
 
 [pandoc]: https://pandoc.org/
+[watchexec]: https://github.com/watchexec/watchexec

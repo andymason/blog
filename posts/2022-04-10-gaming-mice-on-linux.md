@@ -9,9 +9,9 @@ keywords: Linux, Hardware
 Recently, I purchased a wireless mouse that just didn't feel right on screen,
 the pointer felt both too fast and sluggish at the same time.
 
-My first port-of-call with any Linux issue is the [Arch wiki](arch-wiki) where I
-learnt about Mouse polling rate, the rate at which the OS asks the Mouse for its
-position.
+My first port-of-call as with any Linux issue is the [Arch wiki](arch-wiki)
+where I learnt about Mouse polling rate, the rate at which the OS asks the Mouse
+for its position.
 
 Using the great little utility [ezhx](ezhx) I was able to determine the new
 mouse had a polling rate of 125hz, which when used on my 165hz display resulted
@@ -22,8 +22,8 @@ increase the polling rate to 500hz, but what was happing to the other 500hz? The
 [Arch wiki](arch-wiki) had the answer, a known kernel bug that can cause polling
 rates to be halved. The solution was to bypass the monitor's USB hub and plug
 the mouse directly into a USB port on the motherboard. With the USB hub
-bypassed, I was able to reach the full 1000hz polling rate and achieve smooth
-mouse motion on screen.
+bypassed, I was able to reach the full 1000hz polling rate and a smooth mouse
+motion on screen.
 
 ![evhz screenshot](../assets/images/evhz-1000hz-gaming-mouse.png)
 

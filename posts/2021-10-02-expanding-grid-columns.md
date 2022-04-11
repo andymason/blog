@@ -8,25 +8,25 @@ date: 2021-10-02
 **TLDR;** Use `minmax(0, 1fr)` in your `grid-template-columns` styles to prevent
 the expansion of grid columns.
 
-## What's the problem?
+## The problem
 
 When a child of a grid element expands past the fractional width of its
 containing columns, the columns expand to match the width of the child element.
 
-## Why is that a problem?
+## Why's that a problem?
 
-It's sometimes desirable for child of a grid to expand past the constraints of
-the grid, a common case for this is a full-width image within the body of an
-article. The article body will have a `max-width` to prevent the line-length
-growing too large but the image needs to expand past that `max-width` to the
-edges of the viewport with a width of `100vw`.
+Sometimes it's desirable for child of a grid to expand past the constraints of
+the grid, a common case is a full-width image within the body of an article. The
+article body will have a `max-width` to prevent the line-length growing too
+large but the image needs to expand past that `max-width` to the edges of the
+viewport with a width of `100vw`.
 
 Grids with fractional column widths expand to the width of the child element
 when the child has a specified width, in this case the `100vw` width image
 expands the column to match `100vw` resulting in the image extending beyond the
 viewpoint and causing overflow scrolling.
 
-## Exploitation of the issue
+## Exploring the issue
 
 Below you can see an example of the issue. The parent container has a
 `max-width` of `100px` and a three column grid with each column having a width
@@ -72,7 +72,7 @@ width to a maximum of `1fr` and no more, preventing the expansion issue.
 
 ![Working grid](../assets/images/grid-working.png)
 
-# Addendum
+## Addendum
 
 The grid column behaviour documented about has been standard in Firefox for
 while now but only recently appeared in Chrome due to a change in version 93
