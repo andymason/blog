@@ -12,49 +12,46 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <p><a href="index.html">HOME</a></p>
-      </header>
+      <header></header>
 
-      <main id="post"><h1 id="expanding-css-grid-column-workaround">Expanding CSS grid column workaround</h1>
-<p><strong>TLDR;</strong> Use <code>minmax(0, 1fr)</code> in your <code>grid-template-columns</code> styles to prevent the expansion of grid columns.</p>
-<h2 id="the-problem">The problem</h2>
-<p>When a child of a grid element expands past the fractional width of its containing columns, the columns expand to match the width of the child element.</p>
-<h2 id="whys-that-a-problem">Why’s that a problem?</h2>
-<p>Sometimes it’s desirable for child of a grid to expand past the constraints of the grid, a common case is a full-width image within the body of an article. The article body will have a <code>max-width</code> to prevent the line-length growing too large but the image needs to expand past that <code>max-width</code> to the edges of the viewport with a width of <code>100vw</code>.</p>
-<p>Grids with fractional column widths expand to the width of the child element when the child has a specified width, in this case the <code>100vw</code> width image expands the column to match <code>100vw</code> resulting in the image extending beyond the viewpoint and causing overflow scrolling.</p>
-<h2 id="exploring-the-issue">Exploring the issue</h2>
-<p>Below you can see an example of the issue. The parent container has a <code>max-width</code> of <code>100px</code> and a three column grid with each column having a width of <code>1fr</code> or <code>33.33px</code>.</p>
-<p>A child element is positioned in the central column <code>2/3</code> and has a width larger than the containing element’s <code>max-width</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;child&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#parent</span> {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span>fr<span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#child</span> {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">3</span><span class="op">;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">150</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>The first and last columns collapse to <code>0</code> while the central column expands to match the width of the child element.</p>
-<figure>
-<img src="../assets/images/grid-broken.png" alt="Broken grid" /><figcaption aria-hidden="true">Broken grid</figcaption>
-</figure>
-<h2 id="the-solution">The solution</h2>
-<p>To prevent the parent grid columns growing past their original equal <code>1fr</code> widths a constraint is needed in the form of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax()"><code>minmax</code></a> function. By setting a columns to have a width <code>minmax(0, 1fr)</code> ensures they will grow in width to a maximum of <code>1fr</code> and no more, preventing the expansion issue.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#parent</span> {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> minmax(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>fr<span class="fu">)</span>)<span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<figure>
-<img src="../assets/images/grid-working.png" alt="Working grid" /><figcaption aria-hidden="true">Working grid</figcaption>
-</figure>
-<h2 id="addendum">Addendum</h2>
-<p>The grid column behaviour documented about has been standard in Firefox for while now but only recently appeared in Chrome due to a change in version 93 which is catching some people off-guard. There is a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1247594">Chromium bug ticket</a> tracking the <em>issue</em> and a solution is currently being investigated (as of 2021/09/13).</p></main>
+      <main id="post">
+        <h1><a href="index.html">Blog</a> / Expanding CSS grid column workaround</h1>
 
-      <footer>
-        <p>FOOTER</p>
-      </footer>
+        <p><strong>TLDR;</strong> Use <code>minmax(0, 1fr)</code> in your <code>grid-template-columns</code> styles to prevent the expansion of grid columns.</p>
+        <h2 id="the-problem">The problem</h2>
+        <p>When a child of a grid element expands past the fractional width of its containing columns, the columns expand to match the width of the child element.</p>
+        <h2 id="whys-that-a-problem">Why’s that a problem?</h2>
+        <p>Sometimes it’s desirable for child of a grid to expand past the constraints of the grid, a common case is a full-width image within the body of an article. The article body will have a <code>max-width</code> to prevent the line-length growing too large but the image needs to expand past that <code>max-width</code> to the edges of the viewport with a width of <code>100vw</code>.</p>
+        <p>Grids with fractional column widths expand to the width of the child element when the child has a specified width, in this case the <code>100vw</code> width image expands the column to match <code>100vw</code> resulting in the image extending beyond the viewpoint and causing overflow scrolling.</p>
+        <h2 id="exploring-the-issue">Exploring the issue</h2>
+        <p>Below you can see an example of the issue. The parent container has a <code>max-width</code> of <code>100px</code> and a three column grid with each column having a width of <code>1fr</code> or <code>33.33px</code>.</p>
+        <p>A child element is positioned in the central column <code>2/3</code> and has a width larger than the containing element’s <code>max-width</code>.</p>
+        <div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span></span>
+        <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;child&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+        <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+        <div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#parent</span> {</span>
+        <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span>fr<span class="fu">)</span><span class="op">;</span></span>
+        <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+        <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+        <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#child</span> {</span>
+        <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">3</span><span class="op">;</span></span>
+        <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">150</span><span class="dt">px</span><span class="op">;</span></span>
+        <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>The first and last columns collapse to <code>0</code> while the central column expands to match the width of the child element.</p>
+        <figure>
+        <img src="../assets/images/grid-broken.png" alt="Broken grid" /><figcaption aria-hidden="true">Broken grid</figcaption>
+        </figure>
+        <h2 id="the-solution">The solution</h2>
+        <p>To prevent the parent grid columns growing past their original equal <code>1fr</code> widths a constraint is needed in the form of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax()"><code>minmax</code></a> function. By setting a columns to have a width <code>minmax(0, 1fr)</code> ensures they will grow in width to a maximum of <code>1fr</code> and no more, preventing the expansion issue.</p>
+        <div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#parent</span> {</span>
+        <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> minmax(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>fr<span class="fu">)</span>)<span class="op">;</span></span>
+        <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <figure>
+        <img src="../assets/images/grid-working.png" alt="Working grid" /><figcaption aria-hidden="true">Working grid</figcaption>
+        </figure>
+        <h2 id="addendum">Addendum</h2>
+        <p>The grid column behaviour documented about has been standard in Firefox for while now but only recently appeared in Chrome due to a change in version 93 which is catching some people off-guard. There is a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1247594">Chromium bug ticket</a> tracking the <em>issue</em> and a solution is currently being investigated (as of 2021/09/13).</p>
+      </main>
     </div>
   </body>
 </html>

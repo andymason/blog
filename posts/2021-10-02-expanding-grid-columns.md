@@ -3,8 +3,6 @@ title: "Expanding CSS grid column workaround"
 date: 2021-10-02
 ---
 
-# Expanding CSS grid column workaround
-
 **TLDR;** Use `minmax(0, 1fr)` in your `grid-template-columns` styles to prevent
 the expansion of grid columns.
 
