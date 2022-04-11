@@ -4,6 +4,15 @@
 rm -f html/*.html
 
 
+# Ouput index
+pandoc \
+  --template=assets/template.html \
+  --from=markdown+emoji \
+  --to=html \
+  --css assets/css/main.css \
+  --output="index.html" \
+  index.md;
+
 # Convert all markdown posts into HTML
 for file in posts/{*,**/*}.md;
 do
@@ -15,7 +24,7 @@ do
     --template=assets/template.html \
     --from=markdown+emoji \
     --to=html \
+    --css assets/css/main.css \
     --output="html/$(basename "$file" .md).html" \
-    --highlight-style breezedark \
     "$file";
 done
