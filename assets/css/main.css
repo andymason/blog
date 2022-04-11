@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+/* [ Variables ]
+----------------------------------------------------*/
+:root {
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1.125rem;
+  --font-size-large: 2rem;
+
+  --font-family-serif: "Source Serif Pro", Georgia, Times, serif;
+  --font-family-sans-serif: "Inter var", arial, sans-serif;
+
+  --line-height-small: 1.4rem;
+  --line-height-medium: 1.775rem;
+
+  --spacing-tiny: 6px;
+  --spacing-small: 12px;
+  --spacing-medium: 24px;
+  --spacing-large: 64px;
+
+  --border-radius: 6px;
+  --article-width: 70ch;
+
+  --colours-foreground: #242424;
+  --colours-background: #fff;
+  --colours-background-shade: #f1f7f4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --colours-foreground: #d7d4cc;
+    --colours-background: #19151a;
+    --colours-background-shade: #251e26;
+  }
+}
+
+/* [ Reset - based of https://www.joshwcomeau.com/css/custom-css-reset/ ]
+----------------------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--colours-background-shade, #fff);
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* [ Common ]
+----------------------------------------------------*/
+body {
+  font-family: var(--font-family-serif, "serif");
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+
+  color: var(--colours-foreground, #f0f);
+  background-color: var(--colours-background, #f0f);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 var(--spacing-small);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--colours-foreground);
+}
+
+/* [ Header ]
+----------------------------------------------------*/
+.header {
+  text-align: center;
+  margin-top: var(--spacing-medium);
+}
+.header__title {
+  font-weight: 300;
+  font-size: var(--font-size-large);
+  border-bottom: 1px solid var(--colours-foreground);
+  padding-bottom: var(--spacing-tiny);
+  display: inline-block;
+  margin-bottom: var(--spacing-small);
+}
+.header__link {
+  text-decoration: none;
+}
+.header__subtitle {
+  font-size: var(--font-size-medium);
+}
+
+/* [ Post ]
+----------------------------------------------------*/
+#post {
+  width: 100%;
+  max-width: var(--article-width);
+}
+
+#post h1,
+#post h2,
+#post h3,
+#post h4 {
+  margin: var(--spacing-large) 0 var(--spacing-medium) 0;
+  font-weight: 300;
+}
+
+#post h1 {
+  font-size: var(--font-size-large);
+  font-weight: 700;
+}
+
+#post h2 {
+  font-size: 26px;
+}
+
+#post p {
+  font-size: var(--font-size-medium);
+  margin: var(--spacing-medium) 0;
+  line-height: var(--line-height-medium);
+  text-align: justify;
+  hyphens: auto;
+}
+
+#post img,
+#post video,
+#post iframe {
+  width: 100%;
+}
+
+#post pre,
+#post code {
+  font-family: "Source Code Pro", monospace;
+}
+
+#post p code {
+  background: var(--colours-background-shade);
+  border-radius: var(--border-radius);
+}
+
+#post pre {
+  font-size: 0.8em;
+  background: var(--colours-background-shade, #f0f);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-medium);
+  line-height: 1.7em;
+  tab-size: 2;
+  margin: var(--spacing-medium) 0;
+  white-space: pre-wrap;
+}
+
+#post figcaption {
+  font-family: var(--font-family-sans-serif, "sans-serif");
+  font-size: var(--font-size-small);
+  text-align: center;
+  margin: var(--spacing-small, 0) 0;
+}

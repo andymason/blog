@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="date" content="2022-04-10" />
+    <meta name="keywords" content="Linux, Hardware" />
+
+    <title>Gaming mice on Linux</title>
+
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p><a href="index.html">HOME</a></p>
+      </header>
+
+      <main id="post"><h1 id="gaming-mice-on-linux">Gaming mice on Linux</h1>
+<p>Recently, I purchased a wireless mouse that just didn’t feel right on screen, the pointer felt both too fast and sluggish at the same time.</p>
+<p>My first port-of-call with any Linux issue is the <a href="arch-wiki">Arch wiki</a> where I learnt about Mouse polling rate, the rate at which the OS asks the Mouse for its position.</p>
+<p>Using the great little utility <a href="ezhx">ezhx</a> I was able to determine the new mouse had a polling rate of 125hz, which when used on my 165hz display resulted in the sluggish behaviour I was experiencing.</p>
+<p>By switching to a cheaper wired gaming mouse spec’ed at up to 1000hz, I could increase the polling rate to 500hz, but what was happing to the other 500hz? The <a href="arch-wiki">Arch wiki</a> had the answer, a known kernel bug that can cause polling rates to be halved. The solution was to bypass the monitor’s USB hub and plug the mouse directly into a USB port on the motherboard. With the USB hub bypassed, I was able to reach the full 1000hz polling rate and achieve smooth mouse motion on screen.</p>
+<figure>
+<img src="../assets/images/evhz-1000hz-gaming-mouse.png" alt="evhz screenshot" /><figcaption aria-hidden="true">evhz screenshot</figcaption>
+</figure>
+<p>One final improvement and one of personal preference is to disable mouse smoothing on Gnome. There is an option in the <a href="tweaks">Gnome Tweaks</a> tool to customize the “Acceleration Profile” which defaults to “Default” (smoothing). Changing the profile to “Flat” removes mouse smoothing.</p>
+<figure>
+<img src="../assets/images/gnome-tweak-mouse-smoothing-flat.png" alt="Gnome Tweak screenshot" /><figcaption aria-hidden="true">Gnome Tweak screenshot</figcaption>
+</figure></main>
+
+      <footer>
+        <p>FOOTER</p>
+      </footer>
+    </div>
+  </body>
+</html>
