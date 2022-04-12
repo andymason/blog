@@ -35,18 +35,19 @@ than the containing element's `max-width`.
 
 ```HTML
 <div id="parent">
-	<div id="child"></div>
+  <div id="child"></div>
 </div>
 ```
 
 ```CSS
 #parent {
-	grid-template-columns: repeat(3, 1fr);
-	width: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100px;
 }
+
 #child {
-	grid-column: 2/3;
-	width: 150px;
+  grid-column: 2/3;
+  width: 150px;
 }
 ```
 
@@ -64,7 +65,7 @@ width to a maximum of `1fr` and no more, preventing the expansion issue.
 
 ```CSS
 #parent {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 ```
 

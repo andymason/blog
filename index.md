@@ -2,11 +2,13 @@
 title: "Coder on Fire"
 ---
 
-I'm a creative frontend developer and you can check out my work at
+I'm Andrew, a creative frontend developer. You can view my work at
 [coderonfire.com](https://coderonfire.com/)
 
-I write posts for myself such as technical solutions that I spent time solving
-knowing that at some point in the future I'll need that information again.
+I write posts for myself, mostly technical solutions I spent time solving
+knowing that at some point I'll need to refer back too, but also general
+ramblings. Enjoy.
 
+- [Xbox game pass, the sword of Damocles](./html/2022-04-11-xbox-gamepasss-sword-of-damocles.html)
 - [Gaming mice on Linux](./html/2022-04-10-gaming-mice-on-linux.html)
 - [Expanding CSS grid column workaround](./html/2021-10-02-expanding-grid-columns.html)
