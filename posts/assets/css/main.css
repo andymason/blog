@@ -30,12 +30,20 @@
   --colours-foreground: #242424;
   --colours-background: #fff;
   --colours-background-shade: #f7f7f7;
+
+  --syntax-colour-1: #ce2222;
+  --syntax-colour-2: #2150bf;
+  --syntax-colour-3: #008000;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --colours-foreground: #e1dfd9;
     --colours-background: #22252b;
     --colours-background-shade: #292c33;
+
+    --syntax-colour-1: #c68181;
+    --syntax-colour-2: #97addf;
+    --syntax-colour-3: #7b997b;
   }
 }
 
@@ -184,7 +192,6 @@ a:active {
   }
 }
 
-
 #post h1 {
   font-size: var(--font-size-x-large);
   font-weight: 500;
@@ -232,7 +239,8 @@ a:active {
 }
 
 #post pre {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  letter-spacing: -0.02em;
   background: var(--colours-background-shade, #f0f);
   border-radius: var(--border-radius);
   padding: var(--spacing-small);
@@ -265,3 +273,18 @@ a:active {
 #post iframe {
   border-radius: var(--border-radius);
 }
+
+/* [ Syntax ]
+----------------------------------------------------*/
+code span.im { color: var(--syntax-colour-1); } /* Import */
+code span.co { color: var(--syntax-colour-3);  } /* Comment */
+code span.cv { color: var(--syntax-colour-3);   } /* CommentVar */
+code span.sc { color: var(--syntax-colour-1); } /* SpecialChar */
+code span.ss { color: var(--syntax-colour-1); } /* SpecialString */
+code span.st { color: var(--syntax-colour-1); } /* String */
+code span.kw { color: var(--syntax-colour-2);; } /* Keyword */
+code span.dt { color: var(--syntax-colour-1); } /* DataType */
+
+code span.fu { color: var(--syntax-colour-1); } /* Function */
+code span.fl { color: var(--syntax-colour-2);; } /* Float */
+code span.dv { color: var(--syntax-colour-2);; } /* DecVal */
