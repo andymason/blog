@@ -13,7 +13,7 @@ Well, not free, but offering a monthly subscription that's on offer at £1 for
 three months. But once you're subscribed and getting the "free" games, then
 what's the problem?
 
-The reason I cancelled my subscription is that it felt too much like a bait and
+The reason I cancelled my subscription is because it felt too much like a bait and
 switch. I didn't like waiting for the other shoe to drop and an announcement of
 previously available games "transitioning out of availability". 
 
