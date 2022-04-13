@@ -1,10 +1,10 @@
 ---
 date: 2022-04-11
-title: Xbox game pass, the sword of Damocles
+title: Xbox Game Pass --- the sword of Damocles
 ---
 
 "The first taste is free" a phrase that comes to mind when considering
-resubscribing to Xbox game pass.
+resubscribing to Xbox Game Pass.
 
 Microsoft is behind Sony in market dominance, especially in Europe. How do they
 get people to switch sides? Free games.
