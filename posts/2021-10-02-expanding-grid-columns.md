@@ -54,7 +54,7 @@ than the containing element's `max-width`.
 The first and last columns collapse to `0` while the central column expands to
 match the width of the child element.
 
-![Broken grid](../assets/images/grid-broken.png)
+![Broken grid](assets/images/grid-broken.png)
 
 ## The solution
 
@@ -69,7 +69,7 @@ width to a maximum of `1fr` and no more, preventing the expansion issue.
 }
 ```
 
-![Working grid](../assets/images/grid-working.png)
+![Working grid](assets/images/grid-working.png)
 
 ## Addendum
 

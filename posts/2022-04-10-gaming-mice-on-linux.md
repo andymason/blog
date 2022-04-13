@@ -23,14 +23,14 @@ the mouse directly into a USB port on the motherboard. With the USB hub
 bypassed, I was able to reach the full 1000hz polling rate and a smooth mouse
 motion on screen.
 
-![Sample of evhz's output](../assets/images/evhz-1000hz-gaming-mouse.png)
+![Sample of evhz's output](assets/images/evhz-1000hz-gaming-mouse.png)
 
 One final improvement and one of personal preference is to disable mouse
 smoothing on Gnome. There is an option in the [Gnome Tweaks][tweaks] tool to
 customize the "Acceleration Profile" which defaults to "Default" (smoothing).
 Changing the profile to "Flat" removes mouse smoothing.
 
-![Gnome Tweak mouse settings](../assets/images/gnome-tweak-mouse-smoothing-flat.png)
+![Gnome Tweak mouse settings](assets/images/gnome-tweak-mouse-smoothing-flat.png)
 
 [arch-wiki]: https://wiki.archlinux.org/title/Mouse_polling_rate
 [evhz]: https://git.sr.ht/~iank/evhz
