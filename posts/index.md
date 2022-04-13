@@ -1,5 +1,5 @@
 ---
-title: "Coder on Fire"
+title: "Coder on Fire --- Blog"
 ---
 
 I'm Andrew, a creative frontend developer. You can view my work at
