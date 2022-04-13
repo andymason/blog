@@ -33,13 +33,13 @@ of `1fr` or `33.33px`.
 A child element is positioned in the central column `2/3` and has a width larger
 than the containing element's `max-width`.
 
-```HTML
+```html
 <div id="parent">
   <div id="child"></div>
 </div>
 ```
 
-```CSS
+```css
 #parent {
   grid-template-columns: repeat(3, 1fr);
   width: 100px;
@@ -63,7 +63,7 @@ widths a constraint is needed in the form of the [`minmax`][minmax] function. By
 setting a columns to have a width `minmax(0, 1fr)` ensures they will grow in
 width to a maximum of `1fr` and no more, preventing the expansion issue.
 
-```CSS
+```css
 #parent {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
