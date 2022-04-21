@@ -9,6 +9,7 @@ I write posts for myself, mostly technical solutions I spent time solving
 knowing that at some point I'll need to refer back too, but also general
 ramblings. Enjoy.
 
+- [Trigger on View --- A simple intersection observer helper](./2022-04-19-trigger-on-view.html)
 - [Everyone Writes their own blog platform](./2022-04-13-everyone-writes-their-own-blog-platform.html)
 - [Xbox Game Pass --- the sword of Damocles](./2022-04-11-xbox-gamepasss-sword-of-damocles.html)
 - [Gaming mice on Linux](./2022-04-10-gaming-mice-on-linux.html)

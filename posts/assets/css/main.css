@@ -274,6 +274,13 @@ a:active {
   border-radius: var(--border-radius);
 }
 
+#post hr {
+  border: none;
+  background-color: var(--colours-background-shade);
+  height: 1px;
+  margin-bottom: var(--spacing-medium);
+}
+
 /* [ Syntax ]
 ----------------------------------------------------*/
 code span.im { color: var(--syntax-colour-1); } /* Import */
@@ -288,3 +295,15 @@ code span.dt { color: var(--syntax-colour-1); } /* DataType */
 code span.fu { color: var(--syntax-colour-1); } /* Function */
 code span.fl { color: var(--syntax-colour-2);; } /* Float */
 code span.dv { color: var(--syntax-colour-2);; } /* DecVal */
+
+/* [ Full width media on mobile ]
+----------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+  #post video,
+  #post img {
+    width: calc(100vw - var(--spacing-small) * 2);
+    max-width: none;
+    margin-left: calc(var(--spacing-small) * -1);
+  }
+}
