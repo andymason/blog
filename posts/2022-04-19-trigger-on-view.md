@@ -39,7 +39,7 @@ with their thumb.
   <source src="assets/videos/firefox-intersection-scroll-demo-web.mp4" type="video/mp4">
 </video>
 <figcaption>
-  Using `IntersectionObserver` on it's own results in many image loads
+  Using `IntersectionObserver` on its own results in many image loads
 </figcaption>
 </figure>
 
