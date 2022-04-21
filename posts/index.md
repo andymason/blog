@@ -6,7 +6,7 @@ I'm Andrew, a creative frontend developer. You can view my work at
 [coderonfire.com](https://coderonfire.com/)
 
 Posts here are mostly for myself, technical ramblings and problems I've solved
-knowing that at some point I'll need to refer back too them. Enjoy.
+knowing that at some point I'll need to refer back to them. Enjoy.
 
 - [Trigger on View --- A simple intersection observer helper](./2022-04-19-trigger-on-view.html)
 - [Everyone Writes their own blog platform](./2022-04-13-everyone-writes-their-own-blog-platform.html)
