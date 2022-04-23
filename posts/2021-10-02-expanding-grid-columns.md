@@ -6,7 +6,7 @@ date: 2021-10-02
 **TLDR;** Use `minmax(0, 1fr)` in your `grid-template-columns` styles to prevent
 the expansion of grid columns.
 
-## The problem
+---
 
 When a child of a grid element expands past the fractional width of its
 containing columns, the columns expand to match the width of the child element.
