@@ -1,5 +1,7 @@
 # Personal blog
 
+Source for [blog.coderonfire.com](https://blog.coderonfire.com) 
+
 Nothing fancy here. Just a simple bash script using [Pandoc](pandoc) to convert
 Markdown files into HTML.
 
