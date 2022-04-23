@@ -1,23 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url("https://rsms.me/inter/inter.css");
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap');
+/* [ Fonts ]
+----------------------------------------------------*/
+@font-face {
+  font-family: "Inter var";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/Inter.var.woff2") format("woff2");
+  font-named-instance: "Regular";
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/Inter.var.woff2") format("woff2");
+  font-named-instance: "Italic";
+}
+
+@font-face {
+  font-family: "Source Serif VF";
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerif4Variable-Roman.otf.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif VF";
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerif4Variable-Italic.otf.woff2") format("woff2");
+}
 
 /* [ Variables ]
 ----------------------------------------------------*/
 :root {
+  /* 15px at 16px root */
   --font-size-small: 0.875rem;
-  --font-size-medium: 1rem;
+  /* 15px at 16px root */
+  --font-size-medium: 0.938rem;
   --font-size-large: 1.625rem;
   --font-size-x-large: 2rem;
 
-  --font-family-serif: "Source Serif Pro", Georgia, Times, serif;
+  --font-family-serif: "Source Serif VF", Georgia, Times, serif;
   --font-family-sans-serif: "Inter var", arial, sans-serif;
   /* Github's monospace font stack */
-  --font-family-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  
+  --font-family-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo,
+    Consolas, Liberation Mono, monospace;
 
-  --line-height-small: 1.4rem;
-  --line-height-medium: 1.6rem;
+  --line-height-small: 1.2rem;
+  --line-height-medium: 1.4rem;
 
   --spacing-tiny: 6px;
   --spacing-small: 12px;
@@ -88,7 +122,7 @@ h6 {
 /* [ Common ]
 ----------------------------------------------------*/
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -116,7 +150,6 @@ a:hover,
 a:active {
   color: var(--colours-foreground);
 }
-
 
 /* [ Container ]
 ----------------------------------------------------*/
@@ -179,8 +212,8 @@ a:active {
 #post h4 {
   margin: var(--spacing-medium) 0 var(--spacing-small) 0;
   font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.2em;
+  line-height: 1.1em;
+  font-variation-settings: "opsz" 10;
 }
 @media screen and (min-width: 480px) {
   #post h1,
@@ -188,13 +221,13 @@ a:active {
   #post h3,
   #post h4 {
     margin: var(--spacing-large) 0 var(--spacing-small) 0;
-    
+    font-variation-settings: "opsz" 30;
   }
 }
 
 #post h1 {
   font-size: var(--font-size-x-large);
-  font-weight: 500;
+  font-weight: 600;
   margin-top: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
 }
@@ -266,7 +299,6 @@ a:active {
   margin: var(--spacing-small, 0) 0;
 }
 
-
 #post svg,
 #post img,
 #post video,
@@ -283,18 +315,40 @@ a:active {
 
 /* [ Syntax ]
 ----------------------------------------------------*/
-code span.im { color: var(--syntax-colour-1); } /* Import */
-code span.co { color: var(--syntax-colour-3);  } /* Comment */
-code span.cv { color: var(--syntax-colour-3);   } /* CommentVar */
-code span.sc { color: var(--syntax-colour-1); } /* SpecialChar */
-code span.ss { color: var(--syntax-colour-1); } /* SpecialString */
-code span.st { color: var(--syntax-colour-1); } /* String */
-code span.kw { color: var(--syntax-colour-2);; } /* Keyword */
-code span.dt { color: var(--syntax-colour-1); } /* DataType */
+code span.im {
+  color: var(--syntax-colour-1);
+} /* Import */
+code span.co {
+  color: var(--syntax-colour-3);
+} /* Comment */
+code span.cv {
+  color: var(--syntax-colour-3);
+} /* CommentVar */
+code span.sc {
+  color: var(--syntax-colour-1);
+} /* SpecialChar */
+code span.ss {
+  color: var(--syntax-colour-1);
+} /* SpecialString */
+code span.st {
+  color: var(--syntax-colour-1);
+} /* String */
+code span.kw {
+  color: var(--syntax-colour-2);
+} /* Keyword */
+code span.dt {
+  color: var(--syntax-colour-1);
+} /* DataType */
 
-code span.fu { color: var(--syntax-colour-1); } /* Function */
-code span.fl { color: var(--syntax-colour-2);; } /* Float */
-code span.dv { color: var(--syntax-colour-2);; } /* DecVal */
+code span.fu {
+  color: var(--syntax-colour-1);
+} /* Function */
+code span.fl {
+  color: var(--syntax-colour-2);
+} /* Float */
+code span.dv {
+  color: var(--syntax-colour-2);
+} /* DecVal */
 
 /* [ Full width media on mobile ]
 ----------------------------------------------------*/
