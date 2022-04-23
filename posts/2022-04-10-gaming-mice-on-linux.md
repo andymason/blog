@@ -7,8 +7,8 @@ keywords: Linux, Hardware
 Recently, I purchased a wireless mouse that just didn't feel right on screen,
 the pointer felt both too fast and sluggish at the same time.
 
-My first port-of-call as with any Linux issue is the [Arch wiki][arch-wiki]
-where I learnt about Mouse polling rate, the rate at which the OS asks the Mouse
+My first port-of-call as with all Linux issues is the [Arch wiki][arch-wiki]
+where I learnt about Mouse polling rates, the rate at which the OS asks the Mouse
 for its position.
 
 Using the great little utility [evhz][evhz] I was able to determine the new
