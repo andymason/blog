@@ -1,0 +1,14 @@
+---
+layout: layouts/main.vto
+---
+<article class="post">
+  <header>
+    <h1>Blog posts</h1>
+  </header>
+
+  <ul>
+  {{ for post of search.pages("type=post", "date=desc") }}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {{ /for }}
+  </ul>
+</article>

@@ -1,0 +1,98 @@
+/* padding: 0 minmax(var(--gap-small), var(--gap-large)); */
+
+.post {
+  container-type: inline-size;
+  margin: var(--gap-x-large) 0 0;
+
+  /* Spacing
+  ---------------------------------------------*/
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  ol,
+  image,
+  pre,
+  table,
+  video {
+    margin-block-end: var(--gap-medium);
+  }
+
+  /* Add gutter to post content except for certain elements */
+  > :not(p:has(img), video, pre, figure) {
+    padding: 0 var(--gutter);
+  }
+
+  p:has(img, video) {
+    display: flex;
+    justify-content: center;
+  }
+
+  figcaption {
+    font-size: var(--font-size-sm);
+    text-align: center;
+  }
+
+  img,
+  video,
+  pre {
+    border-radius: var(--border-radius-small);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  pre code {
+    padding: var(--gap-vv-small) var(--gap-small);
+  }
+
+  h1 {
+    margin-block-end: var(--gap-large);
+  }
+
+  h2,
+  h3 {
+    margin-block-start: var(--gap-large);
+    letter-spacing: var(--letter-spacing-compact);
+  }
+
+  li {
+    padding-bottom: var(--gap-v-small);
+  }
+
+
+  /* Media & Code
+  ---------------------------------------------*/
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    outline: var(--outline-size-small) solid var(--colour-offset);
+  }
+
+  p code {
+    padding: var(--gap-vv-small) var(--gap-vv-small);
+    background-color: var(--colour-offset);
+    border-radius: var(--border-radius-small);
+  }
+
+  pre {
+    overflow-x: auto;
+    padding: var(--gap-v-small) var(--gap-medium);
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+  }
+
+  pre:has(code) {
+    background-color: var(--colour-offset);
+
+    code {
+      margin: 0;
+      padding: 0;
+      background-color: initial;
+
+    }
+
+  }
+}

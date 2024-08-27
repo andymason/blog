@@ -1,0 +1,77 @@
+/* Site Wide Variables
+---------------------------------------------*/
+
+:root {
+  /* Layout */
+  --max-content-width: 940px;
+  --min-content-width: 320px;
+
+
+  /* Typography */
+  --line-height-base: 1.5;
+  --line-height-v-small: 1;
+  --line-height-small: 1.1;
+  --line-height-large: 1.6;
+
+  --letter-spacing-compact: -0.07rem;
+
+  --font-family-sans-serif: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji';
+  --font-family-monospace: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --font-root-size: 16px;
+  --font-size-sm: clamp(0.8rem, 0.23vi + 0.75rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.47vi + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.82vi + 1.09rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1.35vi + 1.29rem, 2.1rem);
+  --font-size-xl: clamp(1.95rem, 2.1vi + 1.53rem, 2.79rem);
+  --font-size-xxl: clamp(2.44rem, 3.19vi + 1.8rem, 3.72rem);
+  --font-size-xxxl: clamp(3.05rem, 4.73vi + 2.11rem, 4.94rem);
+
+  --font-weight-normal: 300;
+  --font-weight-light: 200;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 700;
+
+  --tab-size: 2;
+
+  /* Spacing */
+  --gap-vv-small: calc(1rem / 4);
+  --gap-v-small: calc(1rem / 2);
+  --gap-small: 1rem;
+  --gap-medium: calc(1rem * 2);
+  --gap-large: calc(1rem * 3);
+  --gap-x-large: calc(1rem * 4);
+  --gap-xx-large: calc(1rem * 6);
+
+  /* NOTE: CSS calc divisions require a non-unit integer value on the right side */
+  --gutter: clamp(var(--gap-small), (100cqi - var(--min-content-width)) / 6, var(--gap-xx-large));
+
+  /* Colours */
+  --colour-black: hsl(210, 6%, 19%);
+  --colour-white: hsl(0, 0%, 99%);
+
+  --colour-brand-primary: hsl(160, 98%, 54%);
+  --colour-brand-primary-minus-1: hsl(from var(--colour-brand-primary) h s 40%);
+  --colour-brand-primary-plus-1: hsl(from var(--colour-brand-primary) h s 60%);
+
+  --colour-text: var(--colour-black);
+  --colour-link: var(--colour-brand-primary-minus-1);
+  --colour-background: var(--colour-white);
+  --colour-offset: hsla(from var(--colour-black) h s l / 0.05);
+
+
+  /* Misc */
+  --border-width-small: 1px;
+  --border-radius-small: 0.25rem;
+  --outline-size-small: 0.25rem;
+  --link-line-thickness: 0.125rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --colour-text: var(--colour-white);
+    --colour-link: var(--colour-brand-primary-plus-1);
+    --colour-background: var(--colour-black);
+    --colour-offset: hsla(from var(--colour-white) h s l / 0.1);
+  }
+}

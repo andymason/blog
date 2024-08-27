@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    <link rel="stylesheet" href="/css/main.css" />
+
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <nav id="site-navigation" class="site-navigation">
+      <a class="site-navigation__link site-navigation__link--home" href="https://coderonfire.com">Coder on Fire</a>
+
+      <ul class="site-navigation__list">
+        <li class="site-navigation__link"><a href="https://coderonfire.com">About me</a></li>
+        <li class="site-navigation__link"><a href="https://blog.coderonfire.com">Blog</a></li>
+        <li class="site-navigation__link"><a href="https://coderonfire.com/cv">CV</a></li>
+        <li class="site-navigation__link"><a href="https://coderonfire.com/#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+    {{ content }}
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+    <p>Built with <a href="https://lume.land/">Lume</a> and hosted on <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>.</p>
+    </footer>
+  </body>
+</html>

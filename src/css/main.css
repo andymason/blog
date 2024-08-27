@@ -1,0 +1,161 @@
+/* Imports are bundled together at the top of the file */
+@import "./reset.css";
+@import "./variables.css";
+@import "./highlight-light.css" screen;
+@import "./highlight-dark.css" screen and (prefers-color-scheme: dark);
+@import "./post.css";
+
+/* Typography 
+---------------------------------------------*/
+html {
+  line-height: var(--line-height-base);
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--font-root-size);
+  tab-size: var(--tab-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+  line-height: var(--line-height-small);
+  font-weight: var(--font-weight-normal);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  letter-spacing: var(--letter-spacing-compact);
+  font-weight: var(--font-weight-bolder);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-md);
+}
+
+p,
+ul,
+ol,
+dl {
+  font-size: var(--font-size-base);
+}
+
+ul,
+ol {
+  line-height: var(--line-height-large);
+
+  li {
+    margin-block-end: var(--gap-v-small);
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-family-monospace);
+}
+
+pre {
+  letter-spacing: var(--letter-spacing-compact);
+  font-size: var(--font-size-sm);
+}
+
+/* Colour theme
+---------------------------------------------*/
+html {
+  color: var(--colour-text);
+  background-color: var(--colour-background);
+  padding: var(--gap-vv-small);
+}
+
+a {
+  color: var(--colour-text);
+  text-decoration-color: var(--colour-link);
+  text-decoration-thickness: var(--link-line-thickness);
+  text-underline-offset: var(--gap-vv-small);
+  font-weight: var(--font-weight-bold);
+
+  &:visited,
+  &:active {
+    color: var(--colour-text);
+  }
+}
+
+/* Layout
+---------------------------------------------*/
+main {
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
+/* Misc. elements
+---------------------------------------------*/
+hr {
+  border: none;
+  border-top: var(--border-width-small) solid var(--colour-offset);
+  margin: var(--gap-large) auto;
+}
+
+
+/* Header (navigation)
+---------------------------------------------*/
+.site-navigation {
+  display: flex;
+  max-width: var(--max-content-width);
+  padding: var(--gap-medium) var(--gap-small);
+  margin: 0 auto;
+  line-height: var(--line-height-small);
+}
+
+.site-navigation__list {
+  display: flex;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  gap: var(--gap-small);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  line-height: var(--line-height-v-small);
+  text-align: right;
+}
+
+.site-navigation__link {
+  font-size: var(--font-size-md);
+  letter-spacing: var(--letter-spacing-compact);
+  margin: 0;
+}
+
+.site-navigation__link--home {
+  flex: 1;
+  text-decoration: none;
+  letter-spacing: var(--letter-spacing-compact);
+}
+
+/* Footer
+---------------------------------------------*/
+.site-footer {
+  display: flex;
+  justify-content: center;
+  border-top: var(--border-width-small) solid var(--colour-offset);
+  margin: var(--gap-x-large) auto var(--gap-small);
+  max-width: var(--max-content-width);
+  padding: var(--gap-medium) var(--gutter);
+  text-align: center;
+}
