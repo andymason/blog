@@ -2,6 +2,8 @@
 ---------------------------------------------*/
 
 :root {
+  color-scheme: light dark;
+
   /* Layout */
   --max-content-width: 940px;
   --min-content-width: 320px;
@@ -54,10 +56,10 @@
   --colour-brand-primary-minus-1: hsl(from var(--colour-brand-primary) h s 40%);
   --colour-brand-primary-plus-1: hsl(from var(--colour-brand-primary) h s 60%);
 
-  --colour-text: var(--colour-black);
-  --colour-link: var(--colour-brand-primary-minus-1);
-  --colour-background: var(--colour-white);
-  --colour-offset: hsla(from var(--colour-black) h s l / 0.05);
+  --colour-text: light-dark(var(--colour-black), var(--colour-white));
+  --colour-link: light-dark(var(--colour-brand-primary-minus-1), var(--colour-brand-primary-plus-1));
+  --colour-background: light-dark(var(--colour-white), var(--colour-black));
+  --colour-offset: light-dark(hsla(from var(--colour-black) h s l / 0.05), hsla(from var(--colour-white) h s l / 0.1));
 
 
   /* Misc */
@@ -65,13 +67,4 @@
   --border-radius-small: 0.25rem;
   --outline-size-small: 0.25rem;
   --link-line-thickness: 0.125rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --colour-text: var(--colour-white);
-    --colour-link: var(--colour-brand-primary-plus-1);
-    --colour-background: var(--colour-black);
-    --colour-offset: hsla(from var(--colour-white) h s l / 0.1);
-  }
 }
