@@ -70,6 +70,10 @@ pre {
   font-size: var(--font-size-sm);
 }
 
+figcaption {
+  text-wrap: balance;
+}
+
 /* Colour theme
 ---------------------------------------------*/
 html {
