@@ -16,7 +16,8 @@
   image,
   pre,
   table,
-  video {
+  video,
+  figure {
     margin-block-end: var(--gap-medium);
   }
 
@@ -61,6 +62,12 @@
     padding-bottom: var(--gap-v-small);
   }
 
+  figure {
+    video {
+      margin-block-end: var(--gap-small);
+    }
+  }
+
 
   /* Media & Code
   ---------------------------------------------*/
@@ -72,20 +79,21 @@
   }
 
   p code {
-    padding: var(--gap-vv-small) var(--gap-vv-small);
     background-color: var(--colour-offset);
     border-radius: var(--border-radius-small);
   }
 
   pre {
     overflow-x: auto;
-    padding: var(--gap-v-small) var(--gap-medium);
+    padding: var(--gap-v-small) var(--gap-small);
     white-space: break-spaces;
     overflow-wrap: break-word;
   }
 
   pre:has(code) {
     background-color: var(--colour-offset);
+    display: flex;
+    justify-content: center;
 
     code {
       margin: 0;

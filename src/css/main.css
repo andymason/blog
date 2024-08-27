@@ -67,7 +67,6 @@ pre {
 }
 
 pre {
-  letter-spacing: var(--letter-spacing-compact);
   font-size: var(--font-size-sm);
 }
 

@@ -18,10 +18,10 @@
   --letter-spacing-compact: -0.07rem;
 
   --font-family-sans-serif: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji';
-  --font-family-monospace: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-family-monospace: ui-monospace, "JetBrains Mono", "DejaVu Sans Mono", SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   --font-root-size: 16px;
-  --font-size-sm: clamp(0.8rem, 0.23vi + 0.75rem, 0.89rem);
+  --font-size-sm: clamp(0.875rem, 0.23vi + 0.75rem, 0.98rem);
   --font-size-base: clamp(1rem, 0.47vi + 0.91rem, 1.19rem);
   --font-size-md: clamp(1.25rem, 0.82vi + 1.09rem, 1.58rem);
   --font-size-lg: clamp(1.56rem, 1.35vi + 1.29rem, 2.1rem);
@@ -49,7 +49,7 @@
   --gutter: clamp(var(--gap-small), (100cqi - var(--min-content-width)) / 6, var(--gap-xx-large));
 
   /* Colours */
-  --colour-black: hsl(210, 6%, 19%);
+  --colour-black: hsl(210, 6%, 12%);
   --colour-white: hsl(0, 0%, 99%);
 
   --colour-brand-primary: hsl(160, 98%, 54%);
