@@ -22,8 +22,14 @@
   }
 
   /* Add gutter to post content except for certain elements */
-  > :not(p:has(img), video, pre, figure) {
+  > :not(p:has(img), video, pre, figure, ul, ol) {
     padding: 0 var(--gutter);
+  }
+
+  /* Add additional gutter for list bullets */
+  ul,
+  ol {
+    padding: 0 calc(var(--gutter) + var(--gap-small));
   }
 
   p:has(img, video) {
