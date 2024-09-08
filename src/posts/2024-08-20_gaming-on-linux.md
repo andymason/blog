@@ -48,10 +48,19 @@ employed; instead, I'll document my final setup:
 Here's my local **MangoHud.conf**, which simply limits the displayed information
 to what I care about: frame rate, pacing, and hardware temperatures.
 
-```text
-vsync=1
+```bash
+# Disable vertical synchronization
+vsync=0
+
+# Set two FPS limits: 162 FPS and 83 FPS
 fps_limit=162,83
+
+# Use the "early" method for frame rate limiting (smoother)
 fps_limit_method=early
+
+# Enable display of throttling status information
 throttling_status=1
+
+# Show the current FPS limit on the overlay
 show_fps_limit=1
 ```
